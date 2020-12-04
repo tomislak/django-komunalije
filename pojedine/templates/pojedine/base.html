@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Pojedine pocetna stranica</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'pojedine/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'pojedine/main.css' %}">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md">
+		<a class="navbar-brand" href="{% url 'index' %}">Komunalije</a>
+  		<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    			<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="main-navigation">
+    		  <ul class="navbar-nav">
+      		    <li class="nav-item">
+		      <a class="nav-link" href="{% url 'struja' %}">Struja</a>
+      		    </li>
+      		    <li class="nav-item">
+		      <a class="nav-link" href="{% url 'plin' %}">Plin</a>
+      		    </li>
+      		    <li class="nav-item">
+		      <a class="nav-link" href="{% url 'voda' %}">Voda</a>
+      		    </li>
+    		  </ul>
+  		</div>
+	</nav>
+
+	<header class="page-header header container-fluid">
+		<div class="container features">
+  		  <div class="row">
+    		    <div class="col-lg-6 col-md-6 col-sm-12">
+		      <h3 class="feature-title"i><a href="{% url 'struja' %}">Struja</a></h3>
+		      <img src="{% static 'pojedine/struja.jpg' %}" class="img-fluid">
+      		      <p>Detalji potrošnje struje</p>
+    		    </div>
+    		    <div class="col-lg-6 col-md-6 col-sm-12">
+		      <h3 class="feature-title"><a href="{% url 'plin' %}">Plin</a></h3>
+		      <img src="{% static 'pojedine/plin.jpg' %}" class="img-fluid">
+      		      <p>Detalji potrošnje plina</p>
+    		    </div>
+  		  </div>
+		</div>
+	</header>
+	
+	<script src="{% static 'pojedine/jquery-3.5.1.min.js' %}"></script>
+	<script src="{% static 'pojedine/bootstrap.min.js' %}"></script>
+</body>
+</html>
